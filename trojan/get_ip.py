@@ -4,7 +4,7 @@ import socket
 
 def get_static_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))  # подключаемся к Google DNS
+    s.connect(("8.8.8.8", 80))  # подключаемся к Google DNS дефолт(8.8.8.8,)
     ip_address = s.getsockname()[0]
     s.close()
     return ip_address
